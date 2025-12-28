@@ -943,3 +943,16 @@ EOF
 echo ""
 echo "Created project in ./$APP_DIR"
 echo "Next: npm i && create .env && run prisma + seed + dev"
+cp .env.example .env
+npm i
+npm run prisma:generate
+npm run db:push
+npm run db:seed
+npm run dev
+stripe listen --forward-to localhost:3000/api/stripe/webhook
+git init
+git add -A
+git commit -m "TCGX beta: contest entry + ballot submit"
+git branch -M main
+git remote add origin https://github.com/YOURUSERNAME/tcgx.git
+git push -u origin main
