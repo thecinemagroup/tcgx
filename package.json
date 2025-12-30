@@ -7,11 +7,6 @@
     "build": "next build",
     "start": "next start"
   },
-"devDependencies": {
-  "typescript": "...",
-  "@types/node": "...",
-  "@types/react": "..."
-}
   "devDependencies": {
     "typescript": "^5.7.2",
     "@types/node": "^22.10.2",
